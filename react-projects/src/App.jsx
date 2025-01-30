@@ -1,28 +1,24 @@
-// import { useState } from 'react'
-import { Route, Router, Routes } from "react-router-dom"
-import Nav from "./components/Nav.jsx"
-import './App.css'
+import Nav from "./components/Nav.jsx";
+import Counter from "./components/react-counter/Counter.jsx";
+import { Route, Routes } from "react-router-dom";
+
+import "./App.css";
 
 function App() {
-
-
   return (
-    <Router>
-
-      <section>
-        <h1>React applikationer och projekt</h1>
-        <p>Nedan kan du se olika projekt/applikationer</p>
+    <>
+      <section className="info-container">
+        <h1>React</h1>
+        <p>Nedan kan du se olika projekt/applikationer gjorda av mig under min utbildning till Frontend utvecklare</p>
       </section>
 
       <Nav />
 
-      <Routes> 
-        <Route path="/" element={<App />} />
+      <Routes>
         <Route path="/counter" element={<Counter />} />
       </Routes>
-
-    </Router>
-  )
+    </>
+  );
 }
 
-export default App
+export default App;

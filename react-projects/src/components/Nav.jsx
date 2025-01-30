@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom"
+
+import { Link } from "react-router-dom";
 
 const Nav = () => {
-    return(
-        <nav>
-        <Link to="/counter"><button>Räknare med React</button></Link> 
-        </nav>
-    );
+  return (
+      <nav className="navlist">
+        <button className="nav-button"><Link to="/counter" className="nav-link">Räknare med React</Link></button>
+        
+      </nav>
+
+  );
 };
 
-export default Nav
+export default Nav;
